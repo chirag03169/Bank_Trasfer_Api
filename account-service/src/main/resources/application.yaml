@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: account-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/account_db?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Tanaji@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8081
+
+logging:
+  level:
+    com.example.account_service: INFO
+    org.hibernate.SQL: DEBUG
